@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a class="active">Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars-bg-2.png" id="stars">
+        <img src="img/moon-bg-2.png" id="moon">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/mountain-front-bg.png" id="mountain">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui, reprehenderit quod adipisci id consequuntur impedit eligendi iste consequatur non suscipit, harum quae repudiandae distinctio praesentium voluptatibus quam voluptatum velit.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iste inventore eveniet expedita alias deleniti nesciunt porro provident adipisci, temporibus voluptates nisi facere ipsa tenetur veritatis, autem iure itaque est.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquam, quis nemo velit dolorem repellat maxime. Repudiandae consectetur dolorem esse sed! Sequi atque optio hic ea consequatur tenetur quod suscipit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui, reprehenderit quod adipisci id consequuntur impedit eligendi iste consequatur non suscipit, harum quae repudiandae distinctio praesentium voluptatibus quam voluptatum velit.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iste inventore eveniet expedita alias deleniti nesciunt porro provident adipisci, temporibus voluptates nisi facere ipsa tenetur veritatis, autem iure itaque est.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquam, quis nemo velit dolorem repellat maxime. Repudiandae consectetur dolorem esse sed! Sequi atque optio hic ea consequatur tenetur quod suscipit!
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountain = document.getElementById('mountain')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = -value * 0.25 + 'px';
+            moon.style.top = 120 + value * 1.25 + 'px';
+            mountain.style.top = value * 0 + 'px';
+            text.style.marginLeft = value * 4 + 'px';
+            btn.style.marginRight = value * 1.9 + 'px';
+        });
+    </script>
+</body>
+</html>
