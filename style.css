@@ -93,13 +93,15 @@ section img#moon{
 }
 #text{
     position: absolute;
-    color: #000;
+    background: linear-gradient(#0F4971, #0F4971);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     white-space: nowrap;
     font-size: 6.5vw;
     z-index: 9;
     transform: translateX(-57%);
-    text-shadow: 2px 2px #fff;
-}
+    text-shadow: 2px 2px 4px #fff;
+} 
 #btn{
     z-index: 9;
     display: inline-block;
